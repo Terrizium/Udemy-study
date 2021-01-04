@@ -1,17 +1,20 @@
-'use strict';
+"use strict";
 
-//alert(1); //модальное окно, не подлежащее стилизации
+let numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?', '1');
+let movie = prompt('Один из последних просмотренных фильмов?', 'Logan');
+let quality = prompt('На сколько оцените его?', '8.1');
+let personalMovieDB = {
 
-//const result = confirm('are you here?'); // модальное окно, для ответа да/нет
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    private: false
 
-//const answer = +prompt("Вам есть 18?", '18');
-//console.log(typeof(answer) );
+};
 
-const answers = [];
+    personalMovieDB.movies[movie] = quality;
+    
 
-answers[0] = prompt('Как ваше имя?', 'Алексей');
-answers[1] = prompt('Какая ваша фамилия?','Неу');
-answers[2] = prompt('сколько вам лет?');
-
-document.write(answers);
-
+console.log(personalMovieDB);
+console.log(personalMovieDB.movies);
